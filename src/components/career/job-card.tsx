@@ -11,7 +11,11 @@ const JobCard = (props: Props) => {
 
   return (
     <JobWrapper>
-      <p>{`${job.startDate?.toLocaleDateString()} à ${job.endDate ? job.endDate.toLocaleDateString() : "maintenant"}`}</p>
+      <div>
+        <span>{job.startDate?.toLocaleDateString(undefined, { month: 'long', year: 'numeric' })}</span>
+        <span> à </span>
+        <span>{job.endDate?.toLocaleDateString(undefined, { month: 'long', year: 'numeric' }) || "maintenant"}</span>
+      </div>
       <h3>{job.name}</h3>
       <p>{job.company} - {job.location}</p>
       <p>{job.description.split('\n').map((text, index) => (

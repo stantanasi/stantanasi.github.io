@@ -1,8 +1,8 @@
 import * as React from "react"
-import "./layout.css"
 import Header from "./header/header"
 import Footer from "./footer/footer"
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import Theme, { themeLight } from './theme';
 
 const MainWrapper = styled.main`
   margin: 0 auto;
@@ -14,12 +14,14 @@ interface Props {
 }
 
 const layout = (props: Props) => {
+  const theme: Theme = themeLight
+
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Header />
       <MainWrapper>{props.children}</MainWrapper>
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }
 

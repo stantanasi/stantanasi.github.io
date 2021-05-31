@@ -11,7 +11,11 @@ const EducationCard = (props: Props) => {
 
   return (
     <EducationWrapper>
-      <p>{`${education.startDate?.toLocaleDateString()} à ${education.endDate ? education.endDate.toLocaleDateString() : "maintenant"}`}</p>
+      <div>
+        <span>{education.startDate?.toLocaleDateString(undefined, { year: 'numeric' })}</span>
+        <span> à </span>
+        <span>{education.endDate?.toLocaleDateString(undefined, { year: 'numeric' }) || "maintenant"}</span>
+      </div>
       <h3>{education.name}</h3>
       <p>{education.school} - {education.location}</p>
       <p>{education.description.split('\n').map((text, index) => (

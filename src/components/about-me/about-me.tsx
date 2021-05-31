@@ -15,7 +15,7 @@ const AboutMe = (props: Props) => {
         <AboutMeAvatar src="/images/lory-stan-tanasi.jpg" />
 
         <AboutMeSummary>
-          Bonjour, je suis Lory-Stan TANASI,développeur Android et web.
+          Bonjour, je suis Lory-Stan TANASI, développeur Android et web.
           <br />
           Diplômé de l'IUT de Cachan en Génie Électrique et Informatique Industrielle, suivie d'une année à l'ESTIAM en alternance chez 42c.
           <br />

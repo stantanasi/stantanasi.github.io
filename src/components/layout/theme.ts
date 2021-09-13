@@ -1,7 +1,8 @@
 export default interface Theme {
   colors: {
-    colorAccent: string;
-    primaryBackgroundColor: string;
+    accentColor: string;
+    backgroundPrimaryColor: string;
+    backgroundSecondaryColor: string;
   };
   fonts: string[];
   fontSizes: {
@@ -14,8 +15,9 @@ export default interface Theme {
 
 export const themeLight: Theme = {
   colors: {
-    colorAccent: "#FFFDF9",
-    primaryBackgroundColor: "#FFF",
+    accentColor: "#FFFDF9",
+    backgroundPrimaryColor: "#FFF",
+    backgroundSecondaryColor: "#FFF",
   },
   fonts: ["sans-serif", "Roboto"],
   fontSizes: {

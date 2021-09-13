@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HeaderWrapper = styled.header`
   width: 100%;
   align-items: center;
-  background: ${props => props.theme.colors.primaryBackgroundColor};
+  background: ${props => props.theme.colors.backgroundPrimaryColor};
   box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
   display: flex;
   min-height: 60px;

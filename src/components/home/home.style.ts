@@ -8,7 +8,7 @@ export const HomeWrapper = styled(SectionWrapper)`
 
 export const HomeIntro = styled.div`
   display: flex;
-  min-height: calc(90vh - 100px);
+  min-height: calc(100vh - 100px);
   align-items: center;
 
   @media (max-width: 768px) {

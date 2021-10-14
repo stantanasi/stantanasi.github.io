@@ -11,7 +11,7 @@ const Contact = (props: Props) => {
     <ContactWrapper id="contact">
       <SectionHeader>Me contacter</SectionHeader>
       <div>
-        Email : stantanasi@gmail.com
+        Email : <a href="mailto:stantanasi@gmail.com">stantanasi@gmail.com</a>
       </div>
     </ContactWrapper>
   )

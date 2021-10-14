@@ -9,7 +9,7 @@ const Header = (props: {}) => {
 
         <HeaderLogo>
           <a href="/">
-            <img src="/images/logo.svg" alt="Lory-Stan TANASI" />
+            &lt;Lory-Stan TANASI /&gt;
           </a>
         </HeaderLogo>
 

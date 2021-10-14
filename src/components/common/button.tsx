@@ -12,6 +12,8 @@ export const Button = styled.button`
   margin: 0px;
   padding: 12px;
   border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
 
   :hover {
     color: rgb(248, 248, 248);

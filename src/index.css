@@ -1,5 +1,5 @@
 :root {
-  --accent-color: #e50914;
+  --accent-color: #80c4ff;
   --dark-color: #141414;
   --light-color: #f4f4f4;
   --background-color: #181818;
@@ -13,9 +13,4 @@
 
 body {
   font-family: 'Verdana', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif';
-}
-
-a {
-  color: #000000;
-  text-decoration: none;
 }

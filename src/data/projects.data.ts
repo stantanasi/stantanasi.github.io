@@ -23,57 +23,6 @@ export interface Project {
 
 const projects: Project[] = [
   {
-    title: "Retrofit JSON:API converter",
-    description: "Conception d’une librairie Android en Kotlin",
-    company: null,
-    startDate: null,
-    endDate: null,
-    links: {
-      github: "https://github.com/stantanasi/retrofit-jsonapi-converter",
-    },
-    languages: [
-      { name: "Kotlin", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" }
-    ],
-    tools: [
-      { name: "Android Studio", src: "https://developer.android.com/studio/images/studio-icon.svg" }
-    ]
-  },
-  {
-    title: "Retrofit OAuth2 converter",
-    description: "Conception d’une librairie Android en Kotlin",
-    company: null,
-    startDate: null,
-    endDate: null,
-    links: {
-      github: "https://github.com/stantanasi/retrofit-oauth2-converter",
-    },
-    languages: [
-      { name: "Kotlin", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" }
-    ],
-    tools: [
-      { name: "Android Studio", src: "https://developer.android.com/studio/images/studio-icon.svg" }
-    ]
-  },
-  {
-    title: "MangaJap",
-    description: "Conception d’une application Android permettant la gestion de livres (manga, BD…)\n\nProgrammation en java sous Android Studio, en SQL et en PHP",
-    company: "MangaJap",
-    startDate: "2018-12-24",
-    endDate: null,
-    links: {
-      github: "https://github.com/stantanasi/mangajap-android",
-      image: "/images/projects/mangajap.png",
-      website: "https://play.google.com/store/apps/details?id=com.tanasi.mangajap"
-    },
-    languages: [
-      { name: "Kotlin", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" },
-      { name: "Java", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" }
-    ],
-    tools: [
-      { name: "Android Studio", src: "https://developer.android.com/studio/images/studio-icon.svg" }
-    ]
-  },
-  {
     title: "Robot guide commandé par Bluetooth",
     description: "Conception d’une carte électronique sous Altium Designer\nProgrammation d’un microcontrôleur sous Mbed",
     company: "IUT de Cachan – Cachan (94)",

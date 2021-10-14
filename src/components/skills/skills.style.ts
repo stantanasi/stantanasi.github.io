@@ -51,4 +51,5 @@ export const SkillTitle = styled.div`
 export const SkillName = styled.h4``;
 
 export const SkillPercentage = styled.span`
+  display: none;
 `;

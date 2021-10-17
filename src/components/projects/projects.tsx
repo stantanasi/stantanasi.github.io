@@ -13,6 +13,7 @@ const ProjectsWrapper = styled(SectionWrapper)``;
 const GitHubProjectsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
 `;
 
 

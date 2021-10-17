@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const GitHubProjectWrapper = styled.article`
   width: 100%;
-  margin: 1.5rem;
   box-shadow: rgb(0 0 0 / 10%) 0px 5px 10px;
   padding: 1rem;
   height: fit-content;
@@ -12,7 +11,7 @@ export const GitHubProjectWrapper = styled.article`
   }
 
   @media (min-width: 800px) {
-    flex: 0 0 calc(50% - 3rem);
+    flex: 0 0 calc(50% - 1rem);
     max-width: 50%;
   }
 `;

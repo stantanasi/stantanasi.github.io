@@ -17,18 +17,6 @@ export const HeaderWrapper = styled.header`
   }
 `
 
-export const HeaderLogo = styled.div`
-  margin-right: auto;
-
-  a {
-    cursor: pointer;
-
-    img {
-      width: 35px;
-    }
-  }
-`
-
 export const HeaderNavbarToggler = styled.button`
   
   @media (min-width: 768px) {

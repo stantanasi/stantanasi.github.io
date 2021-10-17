@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const SectionWrapper = styled.section`
   margin-bottom: 100px;
   scroll-margin-top: 100px;
+  padding: 0 5%;
 `;
 
 export const SectionHeader = styled.h2`

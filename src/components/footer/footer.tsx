@@ -1,18 +1,15 @@
 import React from 'react'
-import { FooterWrapper } from './footer.style'
+import * as Styled from './footer.style'
 
-interface Props {
-
-}
-
-const Footer = (props: Props) => {
+const Footer = (props: {}) => {
   return (
-    <FooterWrapper>
-      <div>
+    <Styled.FooterWrapper>
+      <Styled.FooterDetails>
         <h2>Lory-Stan TANASI</h2>
         <span>© {new Date().getFullYear()} Lory-Stan TANASI. All rights reserved</span>
-      </div>
-      <div>
+      </Styled.FooterDetails>
+
+      <Styled.FooterSocial>
         <a href="https://github.com/stantanasi" target="__blank">
           <img src="/images/icons/github.svg" alt="GitHub" width="24" />
         </a>
@@ -22,8 +19,8 @@ const Footer = (props: Props) => {
         <a href="https://www.instagram.com/stan.tns" target="__blank">
           <img src="/images/icons/instagram.svg" alt="Instagram" width="24" />
         </a>
-      </div>
-    </FooterWrapper>
+      </Styled.FooterSocial>
+    </Styled.FooterWrapper>
   )
 }
 

@@ -2,26 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Layout from  './components/layout/layout';
-import Home from  './components/home/home';
-import AboutMe from './components/about-me/about-me';
-import Career from './components/career/career';
-import Contact from './components/contact/contact';
-import Education from './components/education/education';
-import Projects from './components/projects/projects';
-import Skills from './components/skills/skills';
+import App from './App';
 
+// TODO: https://humanoids.nl/en/articles/styled-components-and-their-naming/
 ReactDOM.render(
   <React.StrictMode>
-    <Layout>
-      <Home />
-      <AboutMe />
-      <Skills />
-      <Projects />
-      <Career />
-      <Education />
-      <Contact />
-    </Layout>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

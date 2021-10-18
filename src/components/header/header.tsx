@@ -11,7 +11,7 @@ const Header = (props: {}) => {
       </a>
 
       <Styled.HeaderNavbarToggler onClick={() => setNavbarIsCollapsed(!navbarIsCollapsed)}>
-        More
+        <img src="/images/icons/navbar-toggler.svg" alt="Navbar toggler" />
       </Styled.HeaderNavbarToggler>
 
       <Styled.HeaderNavbar isCollapsed={navbarIsCollapsed}>

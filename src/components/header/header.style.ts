@@ -18,6 +18,17 @@ export const HeaderWrapper = styled.header`
 `
 
 export const HeaderNavbarToggler = styled.button`
+  padding: .25rem .75rem;
+  border-color: rgba(0,0,0,.1);
+  background-color: transparent;
+  line-height: 1;
+  border-radius: .25rem;
+  display: flex;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
   
   @media (min-width: 768px) {
     display: none;

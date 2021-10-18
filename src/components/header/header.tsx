@@ -28,12 +28,6 @@ const Header = (props: {}) => {
           <Styled.NavLink href="/#projects">Projets</Styled.NavLink>
         </Styled.NavItem>
         <Styled.NavItem>
-          <Styled.NavLink href="/#career">Carrière</Styled.NavLink>
-        </Styled.NavItem>
-        <Styled.NavItem>
-          <Styled.NavLink href="/#education">Formation</Styled.NavLink>
-        </Styled.NavItem>
-        <Styled.NavItem>
           <Styled.NavLink href="/#contact">Contact</Styled.NavLink>
         </Styled.NavItem>
 

@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import { SectionWrapper } from '../common/section.style';
 
 export const SkillsWrapper = styled(SectionWrapper)`
-  position: relative;
 `;
 
 export const SkillsCardWrapper = styled.div`

@@ -2,13 +2,10 @@ import styled from 'styled-components';
 import { SectionWrapper } from '../common/section.style'
 
 export const HomeWrapper = styled(SectionWrapper)`
-  margin-top: 90px;
-  scroll-margin-top: 100px;
-`;
-
-export const HomeIntro = styled.div`
+  padding-top: 100px;
   display: flex;
-  min-height: calc(100vh - 100px);
+  flex-wrap: wrap;
+  min-height: 100vh;
   align-items: center;
 
   @media (max-width: 768px) {
@@ -17,11 +14,16 @@ export const HomeIntro = styled.div`
 `;
 
 export const HomeSummary = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-basis: 60%;
+  }
   @media (max-width: 768px) {
     text-align: center;
-    display: flex;
     align-items: center;
-    flex-direction: column;
+    margin-bottom: 30px;
   }
 `;
 
@@ -52,3 +54,15 @@ export const HomeSocial = styled.div`
 export const HomeIcon = styled.img`
   width: 24px;
 `;
+
+export const HomeImage = styled.div`
+  width: 400px;
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: 40%;
+  }
+`

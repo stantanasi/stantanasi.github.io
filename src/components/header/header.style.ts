@@ -4,7 +4,7 @@ export const HeaderWrapper = styled.header`
   width: 100%;
   align-items: center;
   background: #FFFFFF;
-  box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
+  box-shadow: rgb(0 0 0 / 7%) 0px 5px 10px;
   display: flex;
   padding: 16px 5%;
   position: fixed;

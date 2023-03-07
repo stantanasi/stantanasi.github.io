@@ -14,8 +14,8 @@ const App = (props: {}) => {
 
       <Home />
       <AboutMe />
-      <Skills />
       <Projects />
+      <Skills />
 
       <Footer />
     </main>

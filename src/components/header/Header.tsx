@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import * as Styled from './header.style'
+import * as Styled from './Header.style'
 
 const Header = (props: {}) => {
   const [navbarIsCollapsed, setNavbarIsCollapsed] = useState(true);

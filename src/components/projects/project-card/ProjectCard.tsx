@@ -1,8 +1,8 @@
 import { Project } from '../../../data/projects.data';
-import { Button } from '../../common/button';
-import IFrame from '../../common/iframe';
-import Image from '../../common/image';
-import { ProjectDetails, ProjectLanguage, ProjectLanguagesTools, ProjectPreview, ProjectTool, ProjectWrapper } from './project-card.style';
+import { Button } from '../../common/Button';
+import IFrame from '../../common/Iframe';
+import Image from '../../common/Image';
+import { ProjectDetails, ProjectLanguage, ProjectLanguagesTools, ProjectPreview, ProjectTool, ProjectWrapper } from './ProjectCard.style';
 
 interface Props {
   project: Project;

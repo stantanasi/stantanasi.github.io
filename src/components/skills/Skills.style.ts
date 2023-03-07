@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { SectionWrapper } from '../common/section.style';
+import { SectionWrapper } from '../common/Section.style';
 
 export const SkillsWrapper = styled(SectionWrapper)`
 `;

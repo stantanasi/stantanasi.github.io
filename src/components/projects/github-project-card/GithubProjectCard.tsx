@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import GitHubProject from '../github-project'
-import * as Styled from './github-project-card.style'
+import GitHubProject from '../github-project.type'
+import * as Styled from './GithubProjectCard.style'
 import axios from 'axios';
 import styled from 'styled-components';
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Icon from '../common/icon'
+import Icon from '../common/Icon'
 import { SkillCategory } from '../../data/skills.data'
-import SkillCard from './skill-card'
-import { SkillCategoryName, SkillCategoryTitle, SkillCategoryWrapper, SkillsList } from './skills.style'
+import SkillCard from './SkillCard'
+import { SkillCategoryName, SkillCategoryTitle, SkillCategoryWrapper, SkillsList } from './Skills.style'
 
 interface Props {
   skillCategory: SkillCategory;

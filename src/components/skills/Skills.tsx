@@ -1,8 +1,8 @@
 import React from 'react'
 import skills from '../../data/skills.data'
-import { SectionHeader } from '../common/section.style'
-import { SkillsCardWrapper, SkillsWrapper } from './skills.style'
-import SkillsCard from './skills-card'
+import { SectionHeader } from '../common/Section.style'
+import { SkillsCardWrapper, SkillsWrapper } from './Skills.style'
+import SkillsCard from './SkillsCard'
 
 const Skills = (props: {}) => {
   return (

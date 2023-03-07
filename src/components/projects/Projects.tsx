@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { Component } from 'react'
 import projects, { Project } from '../../data/projects.data';
-import { SectionHeader } from '../common/section.style'
-import ProjectCard from './project-card/project-card';
-import GitHubProject from './github-project';
-import GitHubProjectCard from './github-project-card/github-project-card';
-import * as Styled from './projects.style';
+import { SectionHeader } from '../common/Section.style'
+import ProjectCard from './project-card/ProjectCard';
+import GitHubProject from './github-project.type';
+import GitHubProjectCard from './github-project-card/GithubProjectCard';
+import * as Styled from './Projects.style';
 
 interface ProjectsState {
   gitHubProjects: GitHubProject[];

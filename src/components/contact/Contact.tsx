@@ -1,9 +1,9 @@
 import React from 'react'
-import { SectionHeader } from '../common/section.style'
-import { ContactWrapper } from './contact.style'
+import { SectionHeader } from '../common/Section.style'
+import { ContactWrapper } from './Contact.style'
 
 interface Props {
-  
+
 }
 
 const Contact = (props: Props) => {

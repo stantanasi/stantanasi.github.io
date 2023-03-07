@@ -1,6 +1,6 @@
 import React from 'react'
-import { SectionHeader } from '../common/section.style'
-import * as Styled from './about-me.style'
+import { SectionHeader } from '../common/Section.style'
+import * as Styled from './AboutMe.style'
 
 interface Props {
 

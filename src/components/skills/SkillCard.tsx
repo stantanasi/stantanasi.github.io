@@ -1,7 +1,7 @@
 import React from 'react'
 import { Skill } from '../../data/skills.data'
-import { SkillCardWrapper, SkillName, SkillPercentage, SkillTitle } from './skills.style'
-import ProgressBar from '../common/progress-bar'
+import { SkillCardWrapper, SkillName, SkillPercentage, SkillTitle } from './Skills.style'
+import ProgressBar from '../common/ProgressBar'
 
 interface Props {
   skill: Skill;

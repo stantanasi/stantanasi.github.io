@@ -1,40 +1,34 @@
-import React, { useState } from 'react'
-import * as Styled from './Header.style'
+import React from 'react';
+import { Nav, Navbar } from 'react-bootstrap';
 
-const Header = (props: {}) => {
-  const [navbarIsCollapsed, setNavbarIsCollapsed] = useState(true);
-
+export default function Header() {
   return (
-    <Styled.HeaderWrapper>
-      <a href="/">
-        &lt;Lory-Stan TANASI /&gt;
-      </a>
-
-      <Styled.HeaderNavbarToggler onClick={() => setNavbarIsCollapsed(!navbarIsCollapsed)}>
-        <img src="/images/icons/navbar-toggler.svg" alt="Navbar toggler" />
-      </Styled.HeaderNavbarToggler>
-
-      <Styled.HeaderNavbar isCollapsed={navbarIsCollapsed}>
-        <Styled.NavItem>
-          <Styled.NavLink href="/#home">Accueil</Styled.NavLink>
-        </Styled.NavItem>
-        <Styled.NavItem>
-          <Styled.NavLink href="/#about-me">À propos</Styled.NavLink>
-        </Styled.NavItem>
-        <Styled.NavItem>
-          <Styled.NavLink href="/#skills">Compétences</Styled.NavLink>
-        </Styled.NavItem>
-        <Styled.NavItem>
-          <Styled.NavLink href="/#projects">Projets</Styled.NavLink>
-        </Styled.NavItem>
-        <Styled.NavItem>
-          <Styled.NavLink href="/#contact">Contact</Styled.NavLink>
-        </Styled.NavItem>
-
-      </Styled.HeaderNavbar>
-    </Styled.HeaderWrapper>
+    <Navbar
+      className="px-3"
+      expand="lg"
+      fixed="top"
+      style={{ backgroundColor: "#EAECEFCC" }}
+    >
+      <Navbar.Brand href="/">
+        {`<Stan />`}
+      </Navbar.Brand>
+      <Navbar.Toggle />
+      <Navbar.Collapse>
+        <Nav>
+          <Nav.Link href="/#about-me">
+            À propos
+          </Nav.Link>
+          <Nav.Link href="/#projects">
+            Projets
+          </Nav.Link>
+          <Nav.Link href="/#skills">
+            Compétences
+          </Nav.Link>
+          <Nav.Link href="/#contact">
+            Me contacter
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
-
-export default Header
-

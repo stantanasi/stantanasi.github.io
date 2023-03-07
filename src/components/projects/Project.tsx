@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import GitHubProject from '../github-project.type'
-import * as Styled from './GithubProjectCard.style'
+import GitHubProject from './github-project.type'
+import * as Styled from './Project.style'
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -8,7 +8,7 @@ interface Props {
   project: GitHubProject;
 }
 
-const GitHubProjectCard = (props: Props) => {
+const Project = (props: Props) => {
   return (
     <Styled.GitHubProjectWrapper>
       {props.project.homepage ?
@@ -50,7 +50,7 @@ const GitHubProjectCard = (props: Props) => {
   )
 }
 
-export default GitHubProjectCard
+export default Project
 
 
 

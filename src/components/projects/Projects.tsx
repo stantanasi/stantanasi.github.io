@@ -1,22 +1,19 @@
 import axios from 'axios';
 import { Component } from 'react'
-import projects, { Project } from '../../data/projects.data';
 import { SectionHeader } from '../common/Section.style'
 import GitHubProject from './github-project.type';
-import GitHubProjectCard from './github-project-card/GithubProjectCard';
+import Project from './Project';
 import * as Styled from './Projects.style';
 
 interface ProjectsState {
   gitHubProjects: GitHubProject[];
   mangajapProjects: GitHubProject[];
-  projects: Project[];
 }
 
 export default class Projects extends Component<{}, ProjectsState> {
   state: ProjectsState = {
     gitHubProjects: [],
     mangajapProjects: [],
-    projects: projects,
   }
 
   componentDidMount() {
@@ -38,14 +35,14 @@ export default class Projects extends Component<{}, ProjectsState> {
         <SectionHeader>Projets</SectionHeader>
         <Styled.GitHubProjectsWrapper>
           {this.state.gitHubProjects.map((project, index) => (
-            <GitHubProjectCard
+            <Project
               key={index}
               project={project} />
           ))}
         </Styled.GitHubProjectsWrapper>
         <Styled.GitHubProjectsWrapper>
           {this.state.mangajapProjects.map((project, index) => (
-            <GitHubProjectCard
+            <Project
               key={index}
               project={project} />
           ))}

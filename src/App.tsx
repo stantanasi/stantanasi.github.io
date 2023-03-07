@@ -1,13 +1,8 @@
-import React from 'react'
-import Header from "./components/header/Header"
-import Home from './components/home/Home';
-import AboutMe from './components/about-me/AboutMe';
-import Projects from './components/projects/Projects';
-import Skills from './components/skills/Skills';
-import Footer from "./components/footer/Footer"
+import React from 'react';
+import { Header, Footer } from './components';
+import { Home, AboutMe, Projects, Skills } from './components/home';
 
-
-const App = (props: {}) => {
+export default function App() {
   return (
     <main>
       <Header />
@@ -21,5 +16,3 @@ const App = (props: {}) => {
     </main>
   )
 }
-
-export default App

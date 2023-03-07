@@ -2,7 +2,6 @@ import axios from 'axios';
 import { Component } from 'react'
 import projects, { Project } from '../../data/projects.data';
 import { SectionHeader } from '../common/Section.style'
-import ProjectCard from './project-card/ProjectCard';
 import GitHubProject from './github-project.type';
 import GitHubProjectCard from './github-project-card/GithubProjectCard';
 import * as Styled from './Projects.style';
@@ -51,13 +50,6 @@ export default class Projects extends Component<{}, ProjectsState> {
               project={project} />
           ))}
         </Styled.GitHubProjectsWrapper>
-        <Styled.ProjectsWrapper>
-          {this.state.projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              project={project} />
-          ))}
-        </Styled.ProjectsWrapper>
       </Styled.ProjectWrapper>
     )
   }

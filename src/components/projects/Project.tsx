@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import GitHubProject from './github-project.type'
 import * as Styled from './Project.style'
 import axios from 'axios';
 import styled from 'styled-components';
+import { GitHubProject } from '../../types/GitHub';
 
 interface Props {
   project: GitHubProject;

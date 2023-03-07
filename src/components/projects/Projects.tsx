@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Component } from 'react'
+import { GitHubProject } from '../../types/GitHub';
 import { SectionHeader } from '../common/Section.style'
-import GitHubProject from './github-project.type';
 import Project from './Project';
 import * as Styled from './Projects.style';
 

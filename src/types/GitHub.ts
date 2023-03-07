@@ -1,4 +1,4 @@
-export default interface GitHubProject {
+export interface GitHubProject {
   id: number;
   node_id: string;
   name: string;
@@ -22,7 +22,7 @@ export default interface GitHubProject {
     events_url: string;
     received_events_url: string;
     type: string;
-    site_admin: boolean
+    site_admin: boolean;
   };
   html_url: string;
   description: string;
@@ -91,5 +91,9 @@ export default interface GitHubProject {
   forks: number;
   open_issues: number;
   watchers: number;
-  default_branch: string
+  default_branch: string;
+}
+
+export interface GitHubLanguages {
+  [langage: string]: number;
 }

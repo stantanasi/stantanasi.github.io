@@ -1,27 +1,18 @@
-import React from 'react'
-import Header from "./components/header/header"
-import Home from './components/home/home';
-import AboutMe from './components/about-me/about-me';
-import Contact from './components/contact/contact';
-import Projects from './components/projects/projects';
-import Skills from './components/skills/skills';
-import Footer from "./components/footer/footer"
+import React from 'react';
+import { Header, Footer } from './components';
+import { Home, AboutMe, Projects, Skills } from './components/home';
 
-
-const App = (props: {}) => {
+export default function App() {
   return (
     <main>
       <Header />
 
       <Home />
       <AboutMe />
-      <Skills />
       <Projects />
-      <Contact />
+      <Skills />
 
       <Footer />
     </main>
   )
 }
-
-export default App

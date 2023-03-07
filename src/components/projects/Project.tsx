@@ -1,137 +1,95 @@
-import React, { Component } from 'react'
-import * as Styled from './Project.style'
-import axios from 'axios';
-import styled from 'styled-components';
-import { GitHubProject } from '../../types/GitHub';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faCodeFork, faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useState } from 'react';
+import { Badge, Button, Card, Col } from 'react-bootstrap';
+import { GitHubLanguages, GitHubProject } from '../../types/GitHub';
 
-interface Props {
-  project: GitHubProject;
-}
+export const Languages = ({ languages_url }: { languages_url: string }) => {
+  const [languages, setLanguages] = useState<GitHubLanguages>({})
 
-const Project = (props: Props) => {
+  useEffect(() => {
+    fetch(languages_url)
+      .then((response) => response.json())
+      .then((data: GitHubLanguages) => setLanguages(data))
+  }, [languages_url])
+
+  const total = Object.values(languages).reduce((a, b) => a + b, 0);
+
   return (
-    <Styled.GitHubProjectWrapper>
-      {props.project.homepage ?
-        <a href={props.project.homepage ?? ""}>
-          <Styled.GitHubProjectTitle>{props.project.name}</Styled.GitHubProjectTitle>
-        </a> :
-        <Styled.GitHubProjectTitle>{props.project.name}</Styled.GitHubProjectTitle>
-      }
-
-      <Styled.GitHubProjectDescription>{props.project.description}</Styled.GitHubProjectDescription>
-
-      <Styled.GitHubProjectLinks>
-        <a href={props.project.html_url} target="__blank">
-          <img src="/images/icons/github.svg" alt="" width="24" />
-        </a>
-      </Styled.GitHubProjectLinks>
-
-
-      <hr />
-
-
-      {props.project.languages_url &&
-        <Langages languages_url={props.project.languages_url} />}
-
-      <Footer>
-        <ProjectStats>
-          <a href={`${props.project.html_url}/stargazers`}>
-            <img src="/images/icons/star.svg" alt="Star" />
-            <span> {props.project.stargazers_count}</span>
-          </a>
-          <a href={`${props.project.html_url}/network/members`}>
-            <img src="/images/icons/fork.svg" alt="Fork" />
-            <span> {props.project.forks_count}</span>
-          </a>
-        </ProjectStats>
-        <UpdatedAt>Updated on {new Date(props.project.pushed_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</UpdatedAt>
-      </Footer>
-    </Styled.GitHubProjectWrapper>
+    <div className="pb-3">
+      <span>Langages : </span>
+      <span>
+        {Object.entries(languages).map(([language, val], index) => (
+          <Badge
+            key={index}
+            bg="light"
+            className="me-1"
+            text="dark"
+          >
+            {language}: {(100 * val / total).toFixed(1)} %
+          </Badge>
+        ))}
+      </span>
+    </div>
   )
 }
 
-export default Project
 
-
-
-interface LanguagesState {
-  languages: {
-    [langage: string]: number;
-  }
+type Props = {
+  project: GitHubProject;
 }
 
-class Langages extends Component<{ languages_url: string }, LanguagesState> {
+export default function Project({ project }: Props) {
+  return (
+    <Col md={6}>
+      <Card
+        bg="white"
+        className="mb-5 p-3 shadow-lg"
+      >
+        <Card.Body>
+          {project.homepage ? (
+            <a href={project.homepage ?? ""} rel="noopener noreferrer" target="_blank">
+              <Card.Title as="h5">{project.name}</Card.Title>
+            </a>
+          ) : (
+            <Card.Title as="h5">{project.name}</Card.Title>
+          )}
+          <Card.Text>{project.description}</Card.Text>
 
-  state: LanguagesState = {
-    languages: {}
-  };
+          <div className="d-flex gap-2">
+            <Button
+              href={project.svn_url}
+              variant="outline-secondary"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+              <span> Repo</span>
+            </Button>
+          </div>
 
-  componentDidMount() {
-    axios.get<LanguagesState['languages']>(this.props.languages_url)
-      .then(response => response.data)
-      .then(response => this.setState({
-        languages: response,
-      }));
-  }
+          <hr />
 
-  render() {
-    const total = Object.values(this.state.languages).reduce((a, b) => a + b, 0);
+          <Languages languages_url={project.languages_url} />
 
-    return (
-      <LanguagesComponent>
-        Languages: {Object.entries(this.state.languages).map(([language, val], index) => (
-          <Language
-            key={index}>
-            {language}: {(100 * val / total).toFixed(1)} %
-          </Language>
-        ))}
-      </LanguagesComponent>
-    )
-  }
+          <Card.Text className="d-flex justify-content-between">
+            <span className="d-flex gap-2">
+              <Badge bg="light" text="dark">
+                <FontAwesomeIcon icon={faStar} />
+                <span> {project.stargazers_count}</span>
+              </Badge>
+              <Badge bg="light" text="dark">
+                <FontAwesomeIcon icon={faCodeFork} />
+                <span> {project.forks_count}</span>
+              </Badge>
+            </span>
+            <small className="text-muted">
+              Modifié le {new Date(project.pushed_at).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </small>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
+  )
 }
-
-const LanguagesComponent = styled.div`
-  font-size: 15px;
-  margin-bottom: 5px;
-`;
-
-const Language = styled.span`
-  background-color: #f8f9fa;
-  margin-right: 10px;
-  border-radius: .25rem;
-  display: inline-block;
-  padding: 3px 6px;
-  margin-bottom: 6px;
-  font-size: 13px;
-
-  :hover {
-    background-color: #dae0e5;
-  }
-`;
-
-
-const Footer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
-
-const ProjectStats = styled.div`
-  display: flex;
-  gap: 0.6rem;
-
-  a {
-    color: #57606a;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-
-  img {
-    width: 19px;
-  }
-`
-
-const UpdatedAt = styled.span`
-  font-size: smaller;
-  color: #6c757d;
-`;

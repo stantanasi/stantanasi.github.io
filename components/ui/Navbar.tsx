@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 const items = [
   { name: 'À propos', href: '#about' },
+  { name: 'Expériences', href: '#experience' },
 ];
 
 export default function Navbar() {

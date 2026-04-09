@@ -235,6 +235,11 @@ export const skills: ISkill[] = [
     category: ['software-languages'],
   },
   {
+    name: 'styled-components',
+    icon: 'https://api.iconify.design/devicon:styledcomponents.svg',
+    category: ['frontend'],
+  },
+  {
     name: 'Gatsby',
     icon: 'https://api.iconify.design/devicon:gatsby.svg',
     category: ['frontend'],

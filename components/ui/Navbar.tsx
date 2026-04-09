@@ -1,10 +1,12 @@
-"use client";
+'use client';
 
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Box, Button, Collapse, Container, IconButton, Stack, Toolbar, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 
-const navItems: any[] = [];
+const items = [
+  { name: 'À propos', href: '#about' },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -59,7 +61,7 @@ export default function Navbar() {
           </Typography>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4 }}>
-            {navItems.map((item) => (
+            {items.map((item) => (
               <Typography
                 key={item.name}
                 component="a"
@@ -117,7 +119,7 @@ export default function Navbar() {
               paddingTop: 1,
             }}
           >
-            {navItems.map((item) => (
+            {items.map((item) => (
               <Typography
                 key={item.name}
                 component="a"

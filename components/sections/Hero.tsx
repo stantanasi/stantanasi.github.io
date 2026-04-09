@@ -81,8 +81,8 @@ export default function Hero() {
         >
           {[
             { val: '3+', label: "Ans d'Exp." },
-            { val: '15+', label: 'Projets' },
-            { val: '20+', label: 'Technologies' },
+            { val: '20+', label: 'Projets' },
+            { val: '30+', label: 'Technologies' },
           ].map((stat) => (
             <Box key={stat.label}>
               <Typography

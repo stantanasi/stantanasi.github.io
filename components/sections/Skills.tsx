@@ -1,7 +1,7 @@
 'use client';
 
 import { categories, ICategory, skills } from '@/data/skills';
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 
 export default function Skills() {
@@ -25,6 +25,7 @@ export default function Skills() {
         <Typography
           variant="h3"
           sx={{
+            fontSize: { xs: '2.5rem', md: '4rem' },
             fontWeight: 800,
             textTransform: 'uppercase',
           }}
@@ -37,7 +38,6 @@ export default function Skills() {
           spacing={1.5}
           sx={{
             flexWrap: 'wrap',
-            marginBottom: 6,
             marginTop: 4,
           }}
         >
@@ -69,27 +69,26 @@ export default function Skills() {
           })}
         </Stack>
 
-        <Box
+        <Grid
+          container
+          spacing={4}
           sx={{
-            display: 'grid',
-            gap: { xs: 4, md: 4 },
-            gridTemplateColumns: {
-              xs: 'repeat(3, 1fr)',
-              sm: 'repeat(5, 1fr)',
-              md: 'repeat(7, 1fr)',
-            },
+            marginTop: 6,
           }}
         >
           {result.map((skill) => (
-            <Stack
+            <Grid
               key={skill.name}
-              spacing={1.5}
+              size={{ xs: 4, md: 12 / 7 }}
               sx={{
                 alignItems: 'center',
                 backgroundColor: 'rgba(255,255,255,0.03)',
                 borderColor: 'rgba(255,255,255,0.06)',
+                display: 'flex',
+                flexDirection: 'column',
                 justifyContent: 'center',
                 paddingY: 4,
+                paddingX: 1,
                 transition: 'background-color 0.2s, border-color 0.2s, transform 0.2s',
                 '&:hover': {
                   backgroundColor: 'rgba(200,240,96,0.05)',
@@ -123,11 +122,11 @@ export default function Skills() {
                 className="skill-name"
                 sx={{
                   color: '#555',
+                  fontFamily: 'monospace',
                   fontSize: '13px',
                   fontWeight: 700,
-                  fontFamily: 'monospace',
-                  letterSpacing: 0.5,
                   maxWidth: '100%',
+                  marginTop: 1.5,
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   transition: 'color 0.2s',
@@ -136,9 +135,9 @@ export default function Skills() {
               >
                 {skill.name}
               </Typography>
-            </Stack>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </Container>
     </Box>
   );

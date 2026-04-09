@@ -157,7 +157,7 @@ export default function Navbar() {
                 fontWeight: 800,
                 marginTop: 2,
                 paddingY: 1.5,
-                '&:hover': { bgcolor: '#e8e0c0' },
+                '&:hover': { backgroundColor: '#e8e0c0' },
               }}
             >
               Parlons-en

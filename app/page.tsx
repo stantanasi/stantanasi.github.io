@@ -1,4 +1,5 @@
 import About from '@/components/sections/About';
+import Education from '@/components/sections/Education';
 import Hero from '@/components/sections/Hero';
 import Languages from '@/components/sections/Languages';
 
@@ -7,6 +8,7 @@ export default function Home() {
     <main>
       <Hero />
       <About />
+      <Education />
       <Languages />
     </main>
   );

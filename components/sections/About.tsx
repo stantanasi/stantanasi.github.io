@@ -172,7 +172,7 @@ export default function About() {
             <Typography
               variant="h3"
               sx={{
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
+                fontSize: { xs: '2.5rem', md: '4rem' },
                 fontWeight: 800,
                 textTransform: 'uppercase',
               }}

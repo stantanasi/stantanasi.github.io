@@ -18,7 +18,6 @@ export default function Footer() {
       sx={{
         backgroundColor: '#000',
         borderTop: '1px solid rgba(255,255,255,0.07)',
-        color: '#e8e6e0',
         paddingBottom: 3,
         paddingTop: 6,
       }}

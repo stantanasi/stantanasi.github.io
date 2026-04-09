@@ -6,7 +6,10 @@ export default function Languages() {
     <Box
       component="section"
       id="languages"
-      sx={{ backgroundColor: '#000', paddingY: { xs: 8, md: 12 } }}
+      sx={{
+        backgroundColor: '#000',
+        paddingY: { xs: 8, md: 12 },
+      }}
     >
       <Container maxWidth="md">
         <Typography

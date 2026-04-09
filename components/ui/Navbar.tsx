@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 const items = [
   { name: 'À propos', href: '#about' },
+  { name: 'Projets', href: '#projects' },
   { name: 'Expériences', href: '#experience' },
   { name: 'Compétences', href: '#skills' },
 ];

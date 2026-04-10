@@ -138,7 +138,10 @@ export default function About() {
                     border: '1px solid rgba(255,255,255,0.1)',
                     borderRadius: 0,
                     color: '#888',
-                    '&:hover': { color: '#fff' },
+                    '&:hover': {
+                      borderColor: '#c8f060',
+                      color: '#c8f060',
+                    },
                   }}
                 >
                   {link.icon}
@@ -161,7 +164,10 @@ export default function About() {
                 marginTop: 3,
                 paddingY: 1,
                 textTransform: 'uppercase',
-                '&:hover': { borderColor: '#c8f060', color: '#c8f060' },
+                '&:hover': {
+                  borderColor: '#c8f060',
+                  color: '#c8f060',
+                },
               }}
             >
               Mon CV

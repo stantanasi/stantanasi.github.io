@@ -98,7 +98,7 @@ export default function Projects() {
                     position: 'absolute',
                     backgroundColor: 'rgba(0,0,0,0.85)',
                     inset: 0,
-                    justifyContent: 'center',
+                    justifyContent: { xs: 'flex-start', md: 'center' },
                     opacity: 0,
                     padding: 4,
                     transition: 'all 0.3s ease',

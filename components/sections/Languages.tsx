@@ -42,7 +42,7 @@ export default function Languages() {
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   backgroundColor: 'rgba(200,240,96,0.02)',
-                  '& .lang-abbr': { WebkitTextStroke: '1px #c8f060' },
+                  '& .lang-abbr': { color: '#c8f060' },
                   '& .lang-line': { width: 48, backgroundColor: '#c8f060' },
                   '& .lang-level': { color: '#c8f060' },
                 },
@@ -51,12 +51,11 @@ export default function Languages() {
               <Typography
                 className="lang-abbr"
                 sx={{
-                  color: 'transparent',
+                  color: 'rgba(255,255,255,0.2)',
                   fontSize: '4rem',
                   fontWeight: 800,
                   lineHeight: 1,
                   transition: 'all 0.3s ease',
-                  WebkitTextStroke: '1px rgba(255,255,255,0.2)',
                 }}
               >
                 {language.abbr}

@@ -61,8 +61,7 @@ export default function Hero() {
           <Box
             component="span"
             sx={{
-              color: 'transparent',
-              WebkitTextStroke: '1px rgba(255,255,255,0.3)'
+              color: 'rgba(255,255,255,0.3)'
             }}
           >
             TANASI

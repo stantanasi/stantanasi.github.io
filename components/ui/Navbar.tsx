@@ -40,8 +40,7 @@ export default function Navbar() {
       position="fixed"
       elevation={0}
       sx={{
-        backgroundColor: scrolled || menuOpen ? 'rgba(0, 0, 0, 0.8)' : 'transparent',
-        backdropFilter: scrolled || menuOpen ? 'blur(10px)' : 'none',
+        backgroundColor: scrolled || menuOpen ? '#000' : 'transparent',
         borderBottom: scrolled || menuOpen ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
         transition: 'all 0.3s ease-in-out',
       }}

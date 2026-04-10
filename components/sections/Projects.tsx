@@ -96,8 +96,7 @@ export default function Projects() {
                   spacing={2}
                   sx={{
                     position: 'absolute',
-                    backgroundColor: 'rgba(0,0,0,0.7)',
-                    backdropFilter: 'blur(4px)',
+                    backgroundColor: 'rgba(0,0,0,0.85)',
                     inset: 0,
                     justifyContent: 'center',
                     opacity: 0,

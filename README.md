@@ -1,10 +1,12 @@
 <h1 align="center">Portfolio</h1>
 
 <p align="center">
-  My Portfolio website. Made with React, in TypeScript.
+  <img src="./app/favicon.ico" height="100px" />
+  <br />
+  My Portfolio website built with Next.js and Material UI in TypeScript.
   <br />
   <a href="https://stantanasi.github.io">
-    <strong>Site URL / Demo »</strong>
+    <strong>Visit website »</strong>
   </a>
   <br />
   <br />
@@ -16,24 +18,28 @@
 <details>
   <summary>Table of Contents</summary>
 
-  * [About the project](#about-the-project)
-    * [Built with](#built-with)
-  * [Getting started](#getting-started)
-    * [Prerequisites](#prerequisites)
-    * [Setup](#setup)
-  * [Development](#development)
-  * [Contributing](#contributing)
-  * [Author](#author)
-  * [License](#license)
+- [About the project](#about-the-project)
+  - [Built with](#built-with)
+- [Getting started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+- [Development](#development)
+- [Contributing](#contributing)
+- [Author](#author)
+- [License](#license)
 </details>
 
 ## About the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+More than just a portfolio, this is a technical showcase of my work in Web, Android, and Media Engineering.
 
 ### Built with
-- [React](https://reactjs.org)
-- [Styled Components](https://styled-components.com)
+
+- [Next.js](https://nextjs.org)
+- [Material UI](https://mui.com)
+- [TypeScript](https://www.typescriptlang.org)
+- [Iconify](https://iconify.design)
+- [GitHub API](https://docs.github.com/en/rest)
 
 ## Getting started
 
@@ -61,7 +67,7 @@ npm install
 Run development mode
 
 ```bash
-npm start
+npm run start:dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
@@ -86,5 +92,5 @@ This project is licensed under the `Apache-2.0` License - see the [LICENSE](LICE
 
 <p align="center">
   <br />
-  © 2021 Lory-Stan TANASI. All rights reserved
+  © 2026 Lory-Stan TANASI. All rights reserved
 </p>

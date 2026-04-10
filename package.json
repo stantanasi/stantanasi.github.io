@@ -4,8 +4,7 @@
   "homepage": "https://stantanasi.github.io",
   "scripts": {
     "build": "next build",
-    "start": "next start",
-    "start:dev": "next dev",
+    "start": "next dev",
     "lint": "eslint",
     "compile": "tsc --noEmit",
     "prepare": "husky"

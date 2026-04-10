@@ -64,7 +64,7 @@ export default function Projects() {
                     width: '100%',
                     filter: 'grayscale(0.5) brightness(0.6)',
                     objectFit: 'cover',
-                    transition: 'filter 0.3s, transform 0.3s',
+                    transition: 'all 0.3s',
                   }}
                 />
 
@@ -80,7 +80,7 @@ export default function Projects() {
                     background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)',
                     justifyContent: 'space-between',
                     padding: 3,
-                    transition: 'opacity 0.3s ease',
+                    transition: 'all 0.3s ease',
                   }}
                 >
                   <Typography sx={{ color: '#fff', fontSize: '1.2rem', fontWeight: 800 }}>
@@ -102,7 +102,7 @@ export default function Projects() {
                     justifyContent: 'center',
                     opacity: 0,
                     padding: 4,
-                    transition: 'all 0.4s ease',
+                    transition: 'all 0.3s ease',
                   }}
                 >
                   <Typography variant="h5" sx={{ color: '#fff', fontWeight: 800 }}>

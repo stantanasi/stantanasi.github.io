@@ -56,7 +56,7 @@ export default function Skills() {
                   color: isActive ? '#c8f060' : '#555',
                   fontFamily: 'monospace',
                   textTransform: 'none',
-                  transition: 'color 0.2s, border-color 0.2s',
+                  transition: 'all 0.3s',
                   '&:hover': {
                     borderColor: isActive ? '#c8f060' : 'rgba(255,255,255,0.25)',
                     color: isActive ? '#c8f060' : '#999',
@@ -89,14 +89,14 @@ export default function Skills() {
                 justifyContent: 'center',
                 paddingY: 4,
                 paddingX: 1,
-                transition: 'background-color 0.2s, border-color 0.2s, transform 0.2s',
+                transition: 'all 0.3s',
                 '&:hover': {
                   backgroundColor: 'rgba(200,240,96,0.05)',
                   borderColor: 'rgba(200,240,96,0.2)',
                   transform: 'translateY(-5px)',
                   '& .skill-img': {
-                    transform: 'scale(1.2)',
                     filter: 'grayscale(0%)',
+                    transform: 'scale(1.2)',
                   },
                   '& .skill-name': {
                     color: '#c8f060',
@@ -129,7 +129,7 @@ export default function Skills() {
                   marginTop: 1.5,
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  transition: 'color 0.2s',
+                  transition: 'all 0.3s',
                   whiteSpace: 'nowrap',
                 }}
               >

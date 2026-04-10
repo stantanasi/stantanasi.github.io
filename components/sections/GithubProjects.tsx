@@ -105,7 +105,6 @@ export default function GithubProjects() {
                   transition: 'all 0.3s ease',
                   '&:hover': {
                     borderColor: '#c8f060',
-                    backgroundColor: 'rgba(200,240,96,0.02)',
                     transform: 'translateY(-4px)',
                     '& .repo-name': { color: '#c8f060' },
                   },
@@ -119,7 +118,7 @@ export default function GithubProjects() {
                     fontFamily: 'monospace',
                     fontSize: '1.1rem',
                     fontWeight: 700,
-                    transition: 'color 0.2s',
+                    transition: 'all 0.3s',
                   }}
                 >
                   {repo.name}

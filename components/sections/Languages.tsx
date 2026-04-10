@@ -39,7 +39,7 @@ export default function Languages() {
               sx={{
                 backgroundColor: '#000',
                 padding: { xs: '2rem', md: '3rem 2rem' },
-                transition: 'background-color 0.3s ease',
+                transition: 'all 0.3s ease',
                 '&:hover': {
                   backgroundColor: 'rgba(200,240,96,0.02)',
                   '& .lang-abbr': { WebkitTextStroke: '1px #c8f060' },
@@ -55,7 +55,7 @@ export default function Languages() {
                   fontSize: '4rem',
                   fontWeight: 800,
                   lineHeight: 1,
-                  transition: '-webkit-text-stroke 0.3s ease',
+                  transition: 'all 0.3s ease',
                   WebkitTextStroke: '1px rgba(255,255,255,0.2)',
                 }}
               >
@@ -70,7 +70,7 @@ export default function Languages() {
                   backgroundColor: 'rgba(255,255,255,0.2)',
                   borderColor: 'transparent',
                   marginTop: 2,
-                  transition: 'width 0.3s ease, background-color 0.3s ease',
+                  transition: 'all 0.3s ease',
                 }}
               />
 
@@ -94,7 +94,7 @@ export default function Languages() {
                   letterSpacing: '0.15em',
                   marginTop: 0.5,
                   textTransform: 'uppercase',
-                  transition: 'color 0.3s ease',
+                  transition: 'all 0.3s ease',
                 }}
               >
                 {language.level}

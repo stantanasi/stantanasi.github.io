@@ -244,7 +244,7 @@ export default function About() {
                     color: '#888',
                     fontFamily: 'monospace',
                     fontSize: '0.85rem',
-                    transition: 'borderColor 0.3s, color 0.3s, transform 0.3s',
+                    transition: 'all 0.3s',
                     '&:hover': {
                       borderColor: '#c8f060',
                       color: '#c8f060',

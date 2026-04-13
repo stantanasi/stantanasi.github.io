@@ -31,6 +31,10 @@
 
 ## About the project
 
+<p align="center">
+  <img src="./.github/docs/preview.png" alt="Preview">
+</p>
+
 More than just a portfolio, this is a technical showcase of my work in Web, Android, and Media Engineering.
 
 ### Built with

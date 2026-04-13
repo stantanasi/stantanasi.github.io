@@ -42,7 +42,7 @@ export default function Hero() {
             marginTop: 1,
           }}
         >
-          React • Next.js • React Native • Android Studio • Node.js
+          React • Next.js • React Native • Android Studio • NestJS • Node.js
         </Typography>
 
         <Typography

@@ -19,8 +19,8 @@ export default function About() {
     'React',
     'React Native',
     'Android Studio',
-    'Node.js',
     'NestJS',
+    'Node.js',
     'GitHub',
     'Jira',
   ];

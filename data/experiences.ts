@@ -28,6 +28,22 @@ export const experiences: IExperience[] = [
     collapsible: true,
   },
   {
+    company: 'BYVE',
+    logo: '/companies/byve.png',
+    location: 'Levallois-Perret, France (À distance)',
+    start: new Date('2025-02'),
+    end: new Date('2025-04'),
+    role: 'Développeur Back-End',
+    summary: "Développement d'une infrastructure e-commerce robuste et personnalisée pour une marque de prêt-à-porter",
+    highlights: [
+      'Architecture du back-end sous le framework Remix pour optimiser le rendu serveur (SSR).',
+      "Conception d'une application Shopify personnalisée répondant aux besoins métier spécifiques.",
+      "Mise en place d'un typage TypeScript strict pour garantir la fiabilité de la logique e-commerce."
+    ],
+    skills: ['Remix', 'Shopify API', 'Firestore', 'TypeScript', 'Node.js'],
+    collapsible: false,
+  },
+  {
     company: '42c',
     logo: '/companies/42c.png',
     location: 'Paris, France',

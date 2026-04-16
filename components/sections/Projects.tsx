@@ -153,7 +153,7 @@ export default function Projects() {
 
         <Typography
           sx={{
-            color: '#444',
+            color: '#555',
             fontFamily: 'monospace',
             fontSize: '0.9rem',
             marginTop: 6,
@@ -165,7 +165,7 @@ export default function Projects() {
 
         <Typography
           sx={{
-            color: '#222',
+            color: '#555',
             fontFamily: 'monospace',
             fontSize: '0.75rem',
             marginTop: 1,

@@ -27,7 +27,7 @@ export default function Education() {
           spacing={8}
           direction="column"
           sx={{
-            marginTop: { xs: 8, md: 10 },
+            marginTop: 10,
           }}
         >
           {education.map((edu, index) => (

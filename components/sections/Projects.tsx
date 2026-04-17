@@ -1,6 +1,8 @@
 import { projects } from '@/data/projects';
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 
+const PROJECTS_COUNT = 6;
+
 export default function Projects() {
   return (
     <Box
@@ -23,9 +25,8 @@ export default function Projects() {
           Projets
         </Typography>
 
-
         <Grid container spacing={4} sx={{ marginTop: 10 }}>
-          {projects.map((project, index) => (
+          {projects.slice(0, PROJECTS_COUNT).map((project, index) => (
             <Grid
               key={project.id}
               size={{

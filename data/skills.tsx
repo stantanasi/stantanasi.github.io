@@ -36,7 +36,7 @@ export const skills: ISkill[] = [
   },
   {
     name: 'Next.js',
-    icon: 'https://api.iconify.design/devicon:nextjs.svg?color=white',
+    icon: 'https://api.iconify.design/devicon:nextjs.svg',
     category: ['frontend'],
   },
   {
@@ -47,6 +47,11 @@ export const skills: ISkill[] = [
   {
     name: 'React Native',
     icon: 'https://api.iconify.design/devicon:react.svg',
+    category: ['mobile-tv'],
+  },
+  {
+    name: 'Expo',
+    icon: 'https://api.iconify.design/simple-icons:expo.svg?color=white',
     category: ['mobile-tv'],
   },
   {
@@ -76,7 +81,7 @@ export const skills: ISkill[] = [
   },
   {
     name: 'AWS',
-    icon: 'https://api.iconify.design/devicon:amazonwebservices-wordmark.svg?color=white',
+    icon: 'https://api.iconify.design/devicon:amazonwebservices-wordmark.svg',
     category: ['backend', 'tools-methods'],
   },
   {
@@ -206,7 +211,7 @@ export const skills: ISkill[] = [
   },
   {
     name: 'DynamoDB',
-    icon: 'https://api.iconify.design/devicon:amazonwebservices-wordmark.svg?color=white',
+    icon: 'https://api.iconify.design/devicon:amazonwebservices-wordmark.svg',
     category: ['backend', 'database'],
   },
   {

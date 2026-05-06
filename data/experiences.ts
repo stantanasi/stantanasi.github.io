@@ -19,9 +19,9 @@ export const experiences: IExperience[] = [
     start: new Date('2025-05-01T00:00:00'),
     end: new Date('2025-09-01T00:00:00'),
     role: 'Intérimaire en restauration et hôtellerie',
-    summary: "Service d'excellence en milieu exigeant (Hôtel Molitor 5*, Disneyland Paris). Gestion des flux clients et rigueur opérationnelle.",
+    summary: "Service d'excellence en milieu exigeant (Hôtel Molitor 5★, Disneyland Paris). Gestion des flux clients et rigueur opérationnelle.",
     highlights: [
-      'Service haut de gamme et gestion des commandes (Hôtel 5* Molitor)',
+      'Service haut de gamme et gestion des commandes (Hôtel 5★ Molitor)',
       'Optimisation des flux clients et logistique événementielle (Disneyland Paris)',
     ],
     skills: ['Relation client', 'Rigueur', 'Gestion de flux'],

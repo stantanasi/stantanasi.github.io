@@ -12,7 +12,8 @@ export default function Services() {
   const [selections, setSelections] = useState<number[]>([0, 0, 0]);
   const [step, setStep] = useState<'config' | 'contact'>('config');
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState<{ name?: string; email?: string; }>({});
 
   const categories: { name: string; key: IService['category']; }[] = [
     { name: 'Sites web', key: 'web' },
@@ -35,14 +36,25 @@ export default function Services() {
   const { low, high } = computePrice();
 
   const send = () => {
-    if (sending) return;
+    if (status === 'sending') return;
 
-    if (!form.name || !form.email) {
-      alert('Veuillez remplir au moins votre nom et email.');
+    setErrors({});
+
+    const newErrors: typeof errors = {};
+    if (!form.name.trim()) {
+      newErrors.name = "Le nom est requis";
+    }
+    if (!form.email.trim()) {
+      newErrors.email = "L'email est requis";
+    } else if (!form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/i)) {
+      newErrors.email = "Format d'email invalide";
+    }
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
 
-    setSending(true);
+    setStatus('sending');
     emailjs.send(
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
@@ -65,13 +77,12 @@ export default function Services() {
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     )
       .then(() => {
-        alert('Devis envoyé avec succès !');
+        setStatus('success');
       })
       .catch((err) => {
         console.error('Erreur EmailJS:', err);
-        alert('Désolé, une erreur est survenue. Réessayez plus tard.');
-      })
-      .finally(() => setSending(false));
+        setStatus('error');
+      });
   };
 
   return (
@@ -429,10 +440,16 @@ export default function Services() {
                     type="text"
                     placeholder="Prénom NOM"
                     value={form.name}
-                    onChange={(event) => setForm((prev) => ({
-                      ...prev,
-                      name: event.target.value,
-                    }))}
+                    onChange={(event) => {
+                      setForm((prev) => ({
+                        ...prev,
+                        name: event.target.value,
+                      }));
+                      setErrors((prev) => ({
+                        ...prev,
+                        name: undefined,
+                      }));
+                    }}
                     inputProps={{
                       style: {
                         fontFamily: 'monospace',
@@ -457,6 +474,18 @@ export default function Services() {
                       },
                     }}
                   />
+                  {errors.name && (
+                    <Typography
+                      sx={{
+                        color: '#ff4444',
+                        fontFamily: 'monospace',
+                        fontSize: '10px',
+                        marginTop: 0.5,
+                      }}
+                    >
+                      {errors.name}
+                    </Typography>
+                  )}
                 </Box>
 
                 <Box>
@@ -477,10 +506,16 @@ export default function Services() {
                     type="email"
                     placeholder="email@exemple.com"
                     value={form.email}
-                    onChange={(event) => setForm((prev) => ({
-                      ...prev,
-                      email: event.target.value,
-                    }))}
+                    onChange={(event) => {
+                      setForm((prev) => ({
+                        ...prev,
+                        email: event.target.value,
+                      }));
+                      setErrors((prev) => ({
+                        ...prev,
+                        email: undefined,
+                      }));
+                    }}
                     inputProps={{
                       style: {
                         fontFamily: 'monospace',
@@ -505,6 +540,18 @@ export default function Services() {
                       },
                     }}
                   />
+                  {errors.email && (
+                    <Typography
+                      sx={{
+                        color: '#ff4444',
+                        fontFamily: 'monospace',
+                        fontSize: '10px',
+                        marginTop: 0.5,
+                      }}
+                    >
+                      {errors.email}
+                    </Typography>
+                  )}
                 </Box>
 
                 <Box>
@@ -557,7 +604,34 @@ export default function Services() {
                   />
                 </Box>
 
-                <Stack direction="row" spacing={1} sx={{ marginTop: 1.5 }}>
+                {status === 'success' && (
+                  <Typography
+                    sx={{
+                      color: '#c8f060',
+                      fontFamily: 'monospace',
+                      fontSize: '11px',
+                      marginTop: 1.5,
+                      textAlign: 'center',
+                    }}
+                  >
+                    Demande de devis envoyé avec succès !
+                  </Typography>
+                )}
+                {status === 'error' && (
+                  <Typography
+                    sx={{
+                      color: '#ff4444',
+                      fontFamily: 'monospace',
+                      fontSize: '11px',
+                      marginTop: 1.5,
+                      textAlign: 'center',
+                    }}
+                  >
+                    Une erreur est survenue.
+                  </Typography>
+                )}
+
+                <Stack direction="row" spacing={1}>
                   <Button
                     variant="outlined"
                     onClick={() => setStep('config')}
@@ -579,6 +653,7 @@ export default function Services() {
 
                   <Button
                     variant="contained"
+                    disabled={status === 'sending'}
                     onClick={() => send()}
                     sx={{
                       borderRadius: 0,
@@ -589,13 +664,13 @@ export default function Services() {
                       textTransform: 'none',
                     }}
                   >
-                    Envoyer
+                    {status === 'sending' ? 'Envoi...' : 'Envoyer'}
 
                     <CircularProgress
                       aria-label="Sending…"
                       size={16}
                       style={{
-                        display: sending ? 'block' : 'none',
+                        display: status === 'sending' ? 'block' : 'none',
                         color: '#000'
                       }}
                     />

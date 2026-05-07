@@ -1,7 +1,8 @@
 'use client';
 
 import { IService, services } from '@/data/services';
-import { Box, Button, Container, Grid, Input, Stack, Typography } from '@mui/material';
+import emailjs from '@emailjs/browser';
+import { Box, Button, CircularProgress, Container, Grid, Input, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 
 const SHOW_PRICES = false;
@@ -11,6 +12,7 @@ export default function Services() {
   const [selections, setSelections] = useState<number[]>([0, 0, 0]);
   const [step, setStep] = useState<'config' | 'contact'>('config');
   const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [sending, setSending] = useState(false);
 
   const categories: { name: string; key: IService['category']; }[] = [
     { name: 'Sites web', key: 'web' },
@@ -31,6 +33,46 @@ export default function Services() {
   };
 
   const { low, high } = computePrice();
+
+  const send = () => {
+    if (sending) return;
+
+    if (!form.name || !form.email) {
+      alert('Veuillez remplir au moins votre nom et email.');
+      return;
+    }
+
+    setSending(true);
+    emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      {
+        time: new Date().toLocaleString('fr-FR', {
+          day: '2-digit', month: '2-digit', year: 'numeric',
+          hour: '2-digit', minute: '2-digit',
+        }),
+        name: form.name,
+        email: form.email,
+        message: form.message || "Aucun message supplémentaire",
+        service_name: activeService.name,
+        service_category: activeService.category,
+        quote_details: activeService.questions.map((question, index) => {
+          const selectedOption = question.options[selections[index]];
+          return `• ${question.label} : ${selectedOption.label} (+${selectedOption.price} €)`;
+        }).join('\n'),
+        total_estimated: `${low} € — ${high} €`,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    )
+      .then(() => {
+        alert('Devis envoyé avec succès !');
+      })
+      .catch((err) => {
+        console.error('Erreur EmailJS:', err);
+        alert('Désolé, une erreur est survenue. Réessayez plus tard.');
+      })
+      .finally(() => setSending(false));
+  };
 
   return (
     <Box
@@ -537,16 +579,26 @@ export default function Services() {
 
                   <Button
                     variant="contained"
-                    onClick={() => console.log('SENT')}
+                    onClick={() => send()}
                     sx={{
                       borderRadius: 0,
                       flex: 1,
                       fontFamily: 'monospace',
                       fontSize: '11px',
+                      gap: 2,
                       textTransform: 'none',
                     }}
                   >
                     Envoyer
+
+                    <CircularProgress
+                      aria-label="Sending…"
+                      size={16}
+                      style={{
+                        display: sending ? 'block' : 'none',
+                        color: '#000'
+                      }}
+                    />
                   </Button>
                 </Stack>
               </Stack>

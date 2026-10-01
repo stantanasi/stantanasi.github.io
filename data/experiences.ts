@@ -13,6 +13,23 @@ interface IExperience {
 
 export const experiences: IExperience[] = [
   {
+    company: 'Club Med Les Boucaniers',
+    logo: '/companies/club-med.png',
+    location: 'Sainte-Anne, Martinique',
+    start: new Date('2026-06-03T00:00:00'),
+    end: new Date('2026-08-31T00:00:00'),
+    role: 'Employé Polyvalent Restaurant & Bar',
+    summary: "Gestion du service en village vacances haut de gamme. Rigueur opérationnelle, application des normes HACCP et fluidification des flux clients en environnement multilingue.",
+    highlights: [
+      'Gestion du service buffet/salle : débarrassage, redressage et réassort aux heures de pointe',
+      'Application rigoureuse des normes HACCP et entretien des zones de service',
+      'Logistique et gestion de la plonge pour assurer la continuité des équipements',
+      'Accueil et service de la clientèle internationale en anglais',
+    ],
+    skills: ['Normes HACCP', 'Service en salle', 'Gestion des flux', 'Anglais (Bilingue)'],
+    collapsible: true,
+  },
+  {
     company: 'CRIT Hôtellerie',
     logo: '/companies/crit.png',
     location: 'Paris, France',

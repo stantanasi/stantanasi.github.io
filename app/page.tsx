@@ -5,6 +5,7 @@ import GithubProjects from '@/components/sections/GithubProjects';
 import Hero from '@/components/sections/Hero';
 import Languages from '@/components/sections/Languages';
 import Projects from '@/components/sections/Projects';
+import Services from '@/components/sections/Services';
 import Skills from '@/components/sections/Skills';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
     <main>
       <Hero />
       <About />
+      <Services />
       <Projects />
       <Experience />
       <Skills />

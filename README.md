@@ -5,7 +5,7 @@
   <br />
   My Portfolio website built with Next.js and Material UI in TypeScript.
   <br />
-  <a href="https://stantanasi.github.io">
+  <a href="https://stantanasi.com">
     <strong>Visit website »</strong>
   </a>
   <br />

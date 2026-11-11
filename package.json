@@ -1,10 +1,11 @@
 {
   "name": "stantanasi.github.io",
   "version": "1.0.0",
-  "homepage": "https://stantanasi.github.io",
+  "homepage": "https://stantanasi.com",
   "scripts": {
     "build": "next build",
-    "start": "next dev",
+    "start": "next start",
+    "start:dev": "next dev",
     "lint": "eslint",
     "compile": "tsc --noEmit",
     "prepare": "husky"
